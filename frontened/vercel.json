@@ -1,0 +1,38 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "vite",
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/index.js"
+    },
+    {
+      "source": "/shorten",
+      "destination": "/api/index.js"
+    },
+    {
+      "source": "/analytics",
+      "destination": "/api/index.js"
+    },
+    {
+      "source": "/health",
+      "destination": "/api/index.js"
+    },
+    {
+      "source": "/status",
+      "destination": "/api/index.js"
+    },
+    {
+      "source": "/links/(.*)",
+      "destination": "/api/index.js"
+    },
+    {
+      "source": "/r/(.*)",
+      "destination": "/api/index.js"
+    },
+    {
+      "source": "/((?!assets|favicon|icons|vite|.*\\..*).*)",
+      "destination": "/api/index.js"
+    }
+  ]
+}
