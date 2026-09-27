@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Copy, Trash2, Power, Search, ExternalLink, Download } from 'lucide-react';
+import { API_BASE } from '../config/api';
 
 export default function UrlTable({ links, onToggleStatus, onDelete, onExportCSV }) {
   const [search, setSearch] = useState('');
@@ -45,7 +46,7 @@ export default function UrlTable({ links, onToggleStatus, onDelete, onExportCSV 
             {filtered.map(link => (
               <tr key={link.id} className="hover:bg-gray-50">
                 <td className="py-3 px-4 text-indigo-600 font-medium">
-                  <a href={`http://localhost:5000/${link.shortCode}`} target="_blank" rel="noreferrer" className="flex items-center gap-1">
+                  <a href={`${API_BASE}/${link.shortCode}`} target="_blank" rel="noreferrer" className="flex items-center gap-1">
                     {link.shortCode} <ExternalLink size={12}/>
                   </a>
                 </td>
@@ -57,7 +58,7 @@ export default function UrlTable({ links, onToggleStatus, onDelete, onExportCSV 
                   </span>
                 </td>
                 <td className="py-3 px-4 text-right space-x-2">
-                  <button onClick={() => navigator.clipboard.writeText(`http://localhost:5000/${link.shortCode}`)} className="p-1 text-gray-500 hover:text-indigo-600"><Copy size={16}/></button>
+                  <button onClick={() => navigator.clipboard.writeText(`${API_BASE}/${link.shortCode}`)} className="p-1 text-gray-500 hover:text-indigo-600"><Copy size={16}/></button>
                   <button onClick={() => onToggleStatus(link.id)} className="p-1 text-amber-500"><Power size={16}/></button>
                   <button onClick={() => onDelete(link.id)} className="p-1 text-red-500"><Trash2 size={16}/></button>
                 </td>

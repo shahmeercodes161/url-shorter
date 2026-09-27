@@ -23,8 +23,10 @@ app.use('/', urlRoutes);
 // Start server
 const startServer = async () => {
   await connectDB();
-  app.listen(PORT, () => {
-    console.log(`🚀 URL Shortener Backend running on http://localhost:${PORT}`);
+  app.listen(PORT, '0.0.0.0', () => {
+    console.log(`🚀 URL Shortener Backend running on:`);
+    console.log(`   - Local:   http://localhost:${PORT}`);
+    console.log(`   - Network: http://0.0.0.0:${PORT}`);
   });
 };
 
