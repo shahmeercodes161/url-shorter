@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "d78d2a6f-6f75-4a89-b5c8-84745a33b373",
+    "originalUrl": "https://chatgpt.com/c/6ab6b557-de80-83e8-b120-754f994311bc",
+    "shortCode": "HWVSqW",
+    "totalClicks": 3,
+    "isActive": true,
+    "lastAccess": "2026-09-25T18:43:46.441Z",
+    "createdAt": "2026-09-25T18:43:08.250Z"
+  },
+  {
+    "_id": "20d249cf-c4e6-42e7-9dab-70b71f8f97a3",
+    "originalUrl": "https://github.com/facebook/react",
+    "shortCode": "react-repo",
+    "totalClicks": 3,
+    "isActive": true,
+    "lastAccess": "2026-09-25T18:35:14.358Z",
+    "createdAt": "2026-09-25T18:27:45.355Z"
+  }
+]
